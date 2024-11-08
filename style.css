@@ -132,6 +132,29 @@ header .navigation .navigation-items a:hover:before{
   }
 }
 
+header .navigation{
+  text-align: center;
+}
+
+ @media (max-width: 1040px){
+  header{
+      padding: 12px 20px;
+  }
+
+  section{
+      padding: 100px 20px;
+  }
+
+  .home .media-icons{
+      right: 15px;
+  }
+
+  header .navigation{
+      display: none;
+  }
+}  
+
+
 /*SLIDE*/
 .home{
   position: relative;
@@ -281,27 +304,6 @@ header .navigation .navigation-items a:hover:before{
   clip-path: circle(150% at 50% 50%);
 }
 
-header .navigation{
-  text-align: center;
-}
-
- @media (max-width: 1040px){
-  header{
-      padding: 12px 20px;
-  }
-
-  section{
-      padding: 100px 20px;
-  }
-
-  .home .media-icons{
-      right: 15px;
-  }
-
-  header .navigation{
-      display: none;
-  }
-} 
 
 /* CARROSSEL */
 .slider {

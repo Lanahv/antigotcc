@@ -1,91 +1,15 @@
 *{
-    background-color: rgb(0, 0, 0);
-  }
-  
-   ul {
-    list-style: none;
-  
-  } 
-  
-  /* .imagem {
-    position: absolute;
-    top: 0;
-    left: 19px;
-    width: 265px;
-  }
-  
-  .img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  nav{
-    max-width: 1120px;
-    margin: auto;
-    padding: 1.5rem 10rem;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .menu{
-    position: fixed;
-    top: 0;
-    right: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    color:rgb(155, 0, 0); 
-    font-size: larger;
-    float: right;
-  } 
-  
-  /*TOOLTIP*/
-  /* .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 130px;
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 70%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-   */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 
+body{
+  background-color: #000000;
+} 
 
 /*HEADER E MENU*/
 header{
@@ -207,6 +131,29 @@ header .navigation .navigation-items a:hover:before{
     transition: 0.3s ease;
   }
 }
+
+header .navigation{
+  text-align: center;
+}
+
+ @media (max-width: 1040px){
+  header{
+      padding: 12px 20px;
+  }
+
+  section{
+      padding: 100px 20px;
+  }
+
+  .home .media-icons{
+      right: 15px;
+  }
+
+  header .navigation{
+      display: none;
+  }
+}  
+
 
 
   /* Estilos para a galeria */

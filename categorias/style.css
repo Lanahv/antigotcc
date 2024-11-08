@@ -38,7 +38,7 @@ header .logo{
  
 header .navigation{
   position: relative;
-  /* display: none;  */
+  /* display: none;  *
 }
 
 header .navigation.show {
@@ -99,8 +99,8 @@ header .navigation .navigation-items a:hover:before{
   }
 
   header .navigation .navigation-items{
-    background: rgba(255, 255, 255, 0.062); /* Cor de fundo com opacidade */
-    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    background: rgba(255, 255, 255, 0.062); /* Cor de fundo com opacidade *
+    backdrop-filter: blur(10px); /* Aplica o desfoque *
     width: 300px;
     max-width: 600px;
     margin: 20px;

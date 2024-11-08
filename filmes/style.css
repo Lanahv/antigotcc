@@ -2,12 +2,7 @@
   background-color: rgb(0, 0, 0);
 }
 
-ul {
-  list-style: none;
-
-}
-
-.imagem {
+ /* .imagem {
   position: absolute;
   top: 0;
   left: 19px;
@@ -17,72 +12,127 @@ ul {
 .img {
   max-width: 100%;
   height: auto;
-}
+} */
 
-nav{
-  max-width: 1120px;
-  margin: auto;
-  padding: 1.5rem 10rem;
-  
+/*HEADER E MENU*/
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.menu{
+  padding: 15px 140px;
+  transition: 0.5s ease;
   position: fixed;
-  top: 0;
-  right: 20px;
-  color: rgb(255, 255, 255);
-  display: flex;
-  gap: 1.5rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  color:rgb(148, 13, 13); 
-  font-size: larger;
-  float: right;
 }
 
-/*TOOLTIP*/
-.tooltip {
+header .logo{
+  color: #ffffff;
+  font-family: "Paytone One";
+  text-shadow: 2px 2px 5px rgb(255, 0, 0);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+ 
+header .navigation{
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+  /* display: none; */
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 130px;
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+header .navigation.show {
+  display: flex; 
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+  font-family: "Lilita One" , sans-serif;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
   position: absolute;
-  z-index: 1;
-  bottom: 70%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  background: #ff0000;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #ffffff;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items{
+    background: rgba(255, 255, 255, 0.062); /* Cor de fundo com opacidade */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    width: 300px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 20%);
+  }
+
+  .menu{
+    background: url(/icones_header/bars-solid.svg)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: rgb(255, 255, 255);
+  }
+
+  .menu.active{
+    z-index: 999;
+    background: url(/icones_header/circle-xmark-regular.svg)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
 }
 
 /* Estilos para a galeria */

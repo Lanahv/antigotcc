@@ -168,23 +168,23 @@ section.paraimg1{
 }
 
 .title1 h1{
-  margin: 0 auto;
-  color: #ffffff;
-  font-family: "Rubik Mono One", monospace;
+  color: #fd0000;
+  font-family: "Permanent Marker";
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 
-/*CARDS - CATEGORIAS*/
-.category{
+/*CARD CATEGORIA 2*/
+/*AÇÃO*/
+.category1{
   display: flex;
   justify-content: center;
   gap: 65px;
 }
 
-/*AÇÃO*/
-.card {
+.card-acao {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
   transition: 0.3s;
@@ -192,12 +192,12 @@ section.paraimg1{
   width: 30%;
 }
 
-.card:hover {
+.card-acao:hover {
   /* On mouse-over, add a deeper shadow */
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
 }
 
-.image-container {
+.image-container-acao {
   position: relative;
   width: 100%;
 }
@@ -209,7 +209,7 @@ img {
   filter: opacity(0.2);
 }
 
-.text-overlay {
+.text-overlay-acao {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -219,10 +219,9 @@ img {
   text-align: center;
   padding: 10px;
   border-radius: 5px;
-  font-family: "Lilita One" , sans-serif;
 }
 
-.text-overlay h4{
+.text-overlay-acao h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }
@@ -241,7 +240,7 @@ img {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
 }
 
-.image-containercomedia {
+.image-container-comedia {
   position: relative;
   width: 100%;
 }
@@ -253,7 +252,7 @@ img {
   filter: opacity(0.2);
 }
 
-.text-overlaycomedia {
+.text-overlay-comedia {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -266,19 +265,20 @@ img {
   font-family: "Lilita One" , sans-serif;
 }
 
-.text-overlaycomedia h4{
+.text-overlay-comedia h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }
 
 
 /*CARD CATEGORIA 2*/
+/*AVENTURA*/
 .category2{
   display: flex;
   justify-content: center;
   gap: 65px;
 }
-/*AVENTURA*/
+
 .card-aventura {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
@@ -292,7 +292,7 @@ img {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
 }
 
-.image-containeraventura {
+.image-container-aventura {
   position: relative;
   width: 100%;
 }
@@ -304,7 +304,7 @@ img {
   filter: opacity(0.2);
 }
 
-.text-overlayaventura {
+.text-overlay-aventura {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -316,19 +316,71 @@ img {
   border-radius: 5px;
   font-family: "Lilita One" , sans-serif;
 }
-.text-overlayaventura h4{
+
+.text-overlay-aventura h4{
+  font-family: "Lilita One", sans-serif;
+  font-size: larger;
+}
+
+/*ROMANCE*/
+.category2{
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+}
+
+.card-romance {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  width: 30%;
+}
+
+.card-romance:hover {
+  /* On mouse-over, add a deeper shadow */
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+.image-container-romance {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  filter: opacity(0.2);
+}
+
+.text-overlay-romance {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact center */
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust the font size */
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Lilita One" , sans-serif;
+}
+
+.text-overlay-romance h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }
 
 
 /*CARD CATEGORIA 3*/
+/*ANIME*/
 .category3{
   display: flex;
   justify-content: center;
   gap: 65px;
 }
-/*ANIME*/
+
 .card-anime {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
@@ -342,7 +394,7 @@ img {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
 }
 
-.image-containeranime {
+.image-container-anime {
   position: relative;
   width: 100%;
 }
@@ -354,7 +406,7 @@ img {
   filter: opacity(0.2);
 }
 
-.text-overlayanime {
+.text-overlay-anime {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -366,7 +418,56 @@ img {
   border-radius: 5px;
   font-family: "Lilita One" , sans-serif;
 }
-.text-overlayanime h4{
+.text-overlay-anime h4{
+  font-family: "Lilita One", sans-serif;
+  font-size: larger;
+}
+
+/*COMFORT MOVIES*/
+.category3{
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+}
+
+.card-comfort {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  width: 30%;
+}
+
+.card-comfort:hover {
+  /* On mouse-over, add a deeper shadow */
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+.image-container-comfort {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  filter: opacity(0.2);
+}
+
+.text-overlay-comfort {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact center */
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust the font size */
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Lilita One" , sans-serif;
+}
+.text-overlay-comfort h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }

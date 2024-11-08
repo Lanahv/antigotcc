@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>FORMULÁRIO DE CONTATO</h1>
+        <form class="myForm" action="https://formspree.io/f/movawwje" method="POST">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo">
+                <div class="error-message" id="nameError">Por favor, preencha o nome.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email atual!">
+                <div class="error-message" id="emailError">Por favor, insira um email válido.</div>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comentário:</label>
+                <textarea id="comment" name="comment"  placeholder="Deixe seu comentário!"></textarea>
+                <div class="error-message" id="commentError">Por favor, insira um comentário.</div>
+            </div>
+            <button class="botao" type="submit">ENVIAR</button>
+        </form>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>

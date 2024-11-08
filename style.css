@@ -1,0 +1,478 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body{
+  background-color: #000000;
+} 
+
+/*HEADER E MENU*/
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 140px;
+  transition: 0.5s ease;
+  position: fixed;
+}
+
+header .logo{
+  color: #ffffff;
+  font-family: "Paytone One";
+  text-shadow: 2px 2px 5px rgb(255, 0, 0);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+ 
+header .navigation{
+  position: relative;
+  /* display: none; */
+}
+
+header .navigation.show {
+  display: flex; 
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+  font-family: "Lilita One" , sans-serif;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #ff0000;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #ffffff;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items{
+    background: rgba(255, 255, 255, 0.062); /* Cor de fundo com opacidade */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    width: 300px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 20%);
+  }
+
+  .menu{
+    background: url(/icones_header/bars-solid.svg)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: rgb(255, 255, 255);
+  }
+
+  .menu.active{
+    z-index: 999;
+    background: url(/icones_header/circle-xmark-regular.svg)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+}
+
+/*SLIDE*/
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content{
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 30px;
+  display: none;
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1{
+  /* font-size: 4em; */
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-family: "Lilita One";
+
+}
+
+
+.home .content h1 span{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Lilita One";
+}
+
+.home .content p{
+  margin-bottom: 65px;
+  font-family: "Paytone One", sans-serif;
+}
+
+.home .content a{
+  background: #fff;
+  padding: 15px 35px;
+  color: #1680AC;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  font-family: "Lilita One", "Paytone";
+}
+
+/* .home .media-icons{
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+} 
+
+.home .media-icons a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+  transform: scale(1.3);
+}*/
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(199, 5, 5, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+  background: #2696E9;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}  
+
+.video-slide{
+  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ocupa toda a altura do contêiner */
+  clip-path: circle(0% at 50% 50%); /* Ajuste o clip-path conforme necessário */
+  transition: clip-path 2s ease;
+}
+
+/* Ativa o slide para exibir o conteúdo corretamente */
+.video-slide.active{
+  clip-path: circle(150% at 50% 50%);
+}
+
+header .navigation{
+  text-align: center;
+}
+
+ @media (max-width: 1040px){
+  header{
+      padding: 12px 20px;
+  }
+
+  section{
+      padding: 100px 20px;
+  }
+
+  .home .media-icons{
+      right: 15px;
+  }
+
+  header .navigation{
+      display: none;
+  }
+} 
+
+/* CARROSSEL */
+.slider {
+  position: relative;
+  width: 90%; /* Carrossel ocupa 90% da tela */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 0px; /* Remove espaço entre slides */
+}
+
+.slide {
+  flex: 0 0 30%; /* Cada slide ocupa exatamente 25% */
+  max-width: 40%; /* Limita o slide */
+  box-sizing: border-box; /* Inclui padding/border na largura total */
+  overflow: hidden; /* Garante que imagens maiores não "vazem" */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.slide img {
+  width: 80%; /* A imagem preenche toda a largura do slide */
+  height: 100%; /* A imagem também preenche a altura do slide */
+  object-fit: cover; /* Garante que a imagem cubra o slide sem distorcer */
+  border-radius: 5px 5px 30px 0px;
+  display: block;
+}
+
+/* Botões de navegação */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 0, 0);
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Botões de navegação */
+button {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Botão semi-transparente */
+  color: rgb(255, 0, 0); /* Cor vermelha para o ícone */
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 100; /* Garante que o botão fique acima das imagens */
+  border-radius: 50%; /* Forma circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+}
+
+/* Ajuste para botão da esquerda */
+.prev {
+  left: 10px; /* Mantém o botão próximo à borda esquerda */
+}
+
+/* Ajuste para botão da direita */
+.next {
+  right: 10px; /* Mantém o botão próximo à borda direita */
+}
+
+/* Garante que o slider não sobreponha os botões */
+.slider {
+  position: relative; /* Mantém os botões como filhos do slider */
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+
+ /* Responsividade */
+ @media (max-width: 768px) {
+  .slide img {
+      height: 400px;
+  }
+}
+
+/*GALERIA (LANÇAMENTOS)*/
+.lancamento h1{
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  margin: 50px;
+  right: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 1200px; /* Define uma largura máxima para a galeria */
+  padding: 10px; /*Adiciona padding opcional */
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative; /* Permite o posicionamento da legenda */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  height: 350px; /* Define uma altura fixa */
+  border-radius: 5px 5px 30px 0px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%; /* Faz com que a imagem preencha toda a altura do item */
+  object-fit: cover; /* Corta a imagem para manter a proporção */
+  display: block;
+  transition: transform 0.2s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+  opacity: 0; /* Invisível por padrão */
+  transition: opacity 0.5s; /* Transição suave */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.overlay-text {
+  color: white; /* Cor do texto */
+  font-size: 20px; /* Tamanho da fonte */
+  position: absolute; /* Legenda sobreponha a imagem */
+  bottom: 0; 
+  left: 0;
+  right: 100px;
+  padding: 20px; 
+  text-align: left;
+  transition: opacity 0.5s; 
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 8px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1; /* Torna o overlay visível ao passar o mouse */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+  filter: blur(5px); 
+}
+

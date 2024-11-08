@@ -38,7 +38,7 @@ header .logo{
  
 header .navigation{
   position: relative;
-  /* display: none;  */
+  /* display: none; */
 }
 
 header .navigation.show {
@@ -130,7 +130,29 @@ header .navigation .navigation-items a:hover:before{
     background-position: center;
     transition: 0.3s ease;
   }
-} 
+}
+
+header .navigation{
+  text-align: center;
+}
+
+ @media (max-width: 1040px){
+  header{
+      padding: 12px 20px;
+  }
+
+  section{
+      padding: 100px 20px;
+  }
+
+  .home .media-icons{
+      right: 15px;
+  }
+
+  header .navigation{
+      display: none;
+  }
+}  
 
 
  /*imagem na tela toda e efeito scroll(parallax)*/
@@ -164,7 +186,7 @@ section.paraimg1{
 }
 
 section.paraimg1{
-    background-image: url("https://i.postimg.cc/vBfW2207/categorias.png");
+    background-image: url("https://i.postimg.cc/QN2vxwr3/categorias2.png");
 }
 
 .title1 h1{

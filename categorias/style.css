@@ -221,6 +221,7 @@ img {
   border-radius: 5px;
   font-family: "Lilita One" , sans-serif;
 }
+
 .text-overlay h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
@@ -264,10 +265,12 @@ img {
   border-radius: 5px;
   font-family: "Lilita One" , sans-serif;
 }
+
 .text-overlaycomedia h4{
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }
+
 
 /*CARD CATEGORIA 2*/
 .category2{
@@ -275,7 +278,6 @@ img {
   justify-content: center;
   gap: 65px;
 }
-
 /*AVENTURA*/
 .card-aventura {
   /* Add shadows to create the "card" effect */
@@ -318,6 +320,57 @@ img {
   font-family: "Lilita One", sans-serif;
   font-size: larger;
 }
+
+
+/*CARD CATEGORIA 3*/
+.category3{
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+}
+/*ANIME*/
+.card-anime {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.39);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  width: 30%;
+}
+
+.card-anime:hover {
+  /* On mouse-over, add a deeper shadow */
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+.image-containeranime {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  filter: opacity(0.2);
+}
+
+.text-overlayanime {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact center */
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust the font size */
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Lilita One" , sans-serif;
+}
+.text-overlayanime h4{
+  font-family: "Lilita One", sans-serif;
+  font-size: larger;
+}
+
 
 
 

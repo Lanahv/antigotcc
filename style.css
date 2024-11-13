@@ -304,6 +304,15 @@ header .navigation{
   clip-path: circle(150% at 50% 50%);
 }
 
+/*TITULO*/
+.lancamento h1{
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  margin: 50px;
+  right: 50px;
+}
 
 /* CARROSSEL */
 .slider {
@@ -399,8 +408,8 @@ button {
   }
 }
 
-/*GALERIA (LANÇAMENTOS)*/
-.lancamento h1{
+/*GALERIA (AÇÃO)*/
+.acao h2{
   color: #fff;
   font-family: "Paytone One", sans-serif;
   font-style: normal;
@@ -478,3 +487,11 @@ button {
   filter: blur(5px); 
 }
 
+.romance h2{
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  margin: 50px;
+  right: 50px;
+}

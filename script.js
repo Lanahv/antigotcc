@@ -58,7 +58,8 @@ function moveSlide(direction) {
 }
 
 
-// Função para alternar a ativação de vídeos
+
+// Função para alternar a ativação de vídeos e impedir que os sons dos slides se sobreponham um ao outro
 function activateVideo(index) {
   let videos = document.querySelectorAll('.video-slide');
 

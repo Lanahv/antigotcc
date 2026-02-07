@@ -58,3 +58,31 @@ function moveSlide(direction) {
 }
 
 
+// Função para alternar a ativação de vídeos
+function activateVideo(index) {
+  let videos = document.querySelectorAll('.video-slide');
+
+  videos.forEach((video, i) => {
+    if (i === index) {
+      video.muted = false; // Ativa o som do vídeo ativo
+      video.play(); // Garante que o vídeo está tocando
+    } else {
+      video.muted = true;  // Mantém os vídeos inativos sem som
+      video.pause(); // Pausa os vídeos inativos (opcional)
+    }
+  });
+}
+
+// Inicia o primeiro vídeo com som
+activateVideo(0);
+
+// Supondo que você tenha algum mecanismo de navegação (como botões ou outras interações)
+let buttons = document.querySelectorAll('.nav-btn'); // Supondo que você tenha botões de navegação
+
+buttons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    activateVideo(index);
+  });
+});
+
+
